@@ -1,5 +1,7 @@
 # Epic Telescope (Epic UserWeb Search)
 
+<img align="center" width="60" src="./.github/telescope.png"/>
+
 #### Version 1.0
 
 Based on the amazing work of Marklannucci: [original source](https://github.com/MarkIannucci/ChromeUserWebSearchExtension).
@@ -13,4 +15,4 @@ Project updated to Google's manifest V3 extension platform and currently being m
 ## Authors
 
 - **Mark Iannucci** - _Initial work_
-- **Eric Christensen** - _Maintaining for EPIC Analytics_
+- **Eric Christensen (pheynnx)** - _Maintaining for EPIC Analytics_
