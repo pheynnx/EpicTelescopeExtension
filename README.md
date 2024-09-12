@@ -10,9 +10,9 @@ Used to quickly search text strings on EPIC's different UserWeb knowledge base p
 
 ## Maintenance
 
-Project updated to Google's manifest V3 extension platform and currently being maintained here for a subset of EPIC analytics.
+Project updated to Google's manifest V3 extension platform and currently being maintained here for a subset of EPIC analysts.
 
 ## Authors
 
 - **Mark Iannucci** - _Initial work_
-- **Eric Christensen (pheynnx)** - _Maintaining for EPIC Analytics_
+- **Eric Christensen (pheynnx)** - _Maintaining for EPIC Analysts_
