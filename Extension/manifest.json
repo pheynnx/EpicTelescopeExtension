@@ -1,0 +1,25 @@
+{
+  "name": "Epic Telescope",
+  "description": "Type 'uw ' and your search term to instantly search the Epic UserWeb. 'uw sherlock ' searches Sherlock logs.",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "omnibox": {
+    "keyword": "uw"
+  },
+  "manifest_version": 3,
+  "action": {
+    "default_icon": {
+      "16": "telescope16.png",
+      "32": "telescope32.png"
+    }
+  },
+  "icons": {
+    "16": "telescope16.png",
+    "32": "telescope32.png",
+    "48": "telescope48.png",
+    "128": "telescope128.png"
+  }
+}
