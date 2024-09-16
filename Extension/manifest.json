@@ -22,5 +22,11 @@
     "32": "telescope32.png",
     "48": "telescope48.png",
     "128": "telescope128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{03fc3e79-fbc0-4ad0-9155-7845cb931471}",
+      "strict_min_version": "109.0"
+    }
   }
 }
