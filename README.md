@@ -2,7 +2,7 @@
 
 <img align="center" width="60" src="./.github/telescope.png"/>
 
-#### Version 1.1
+#### Version 1.2
 
 Based on the amazing work of Marklannucci: [original source](https://github.com/MarkIannucci/ChromeUserWebSearchExtension).
 
@@ -21,6 +21,7 @@ Used to quickly search text strings on EPIC's different UserWeb knowledge base p
 | Data Handbook Print Groups       | uw pg \`search text\`                   | uw pg 41                         |
 | Data Handbook Metric             | uw metric \`search text\`               | uw metric 68319                  |
 | Data Handbook Clarity Dictionary | uw cdd \`search text\`                  | uw cdd appointment tags          |
+| System Pulse                     | uw sp                                   | uw sp                            |
 
 ## Maintenance
 
