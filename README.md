@@ -8,6 +8,10 @@ Based on the amazing work of Marklannucci: [original source](https://github.com/
 
 Used to quickly search text strings on EPIC's different UserWeb knowledge base platforms.
 
+## Extension store link
+
+https://chromewebstore.google.com/detail/epic-telescope/hmopnknbeaikdikikcjheehhkebjaboe
+
 ## How to use
 
 | Linked to                        | Query                                   | Example                          |
