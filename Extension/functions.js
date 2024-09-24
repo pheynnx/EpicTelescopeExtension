@@ -16,6 +16,7 @@ export function buildUrl(text) {
   const dhInitialURL = "https://datahandbook.epic.com/Search/Index?SearchWord=";
   const novaInitialURL = "https://nova.epic.com/";
   const sherlockInitialURL = "https://sherlock.epic.com/default.aspx?";
+  const systemPulseURL = "https://systempulse.epic.com";
 
   // if user enters a keyword after the omnibox keyword, redirect search to different destination
   var splitText = text.split(" ");
@@ -90,6 +91,9 @@ export function buildUrl(text) {
     case "metric":
       var newURL =
         dhInitialURL + prepSearchString(text.substring(7)) + "&type=4";
+      break;
+    case "sp":
+      var newURL = systemPulseURL;
       break;
     default:
       var newURL = galaxyInitialURL + prepSearchString(text);

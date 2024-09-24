@@ -90,3 +90,8 @@ test("test metric url", async (t) => {
     "https://datahandbook.epic.com/Search/Index?SearchWord=nothing&type=4",
   );
 });
+
+test("test system pulse url", async (t) => {
+  const output = await buildUrl("sp");
+  t.is(output, "https://systempulse.epic.com");
+});

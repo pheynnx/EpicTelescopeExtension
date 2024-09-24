@@ -6,8 +6,6 @@
   "scripts": {
     "test": "run-p -c test:*",
     "test:ava": "ava",
-    "test:prettier": "prettier --check ./**/*.js",
-    "coverage": "nyc --reporter=lcov ava",
     "format": "prettier --write ./**/*.js"
   },
   "repository": {
