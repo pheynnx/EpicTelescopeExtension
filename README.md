@@ -2,7 +2,7 @@
 
 <img align="center" width="60" src="./.github/telescope.png"/>
 
-#### Version 1.2
+#### Version 1.3
 
 Based on the amazing work of Marklannucci: [original source](https://github.com/MarkIannucci/ChromeUserWebSearchExtension).
 
@@ -25,6 +25,7 @@ https://chromewebstore.google.com/detail/epic-telescope/hmopnknbeaikdikikcjheehh
 | Data Handbook Print Groups       | uw pg \`search text\`                   | uw pg 41                         |
 | Data Handbook Metric             | uw metric \`search text\`               | uw metric 68319                  |
 | Data Handbook Clarity Dictionary | uw cdd \`search text\`                  | uw cdd appointment tags          |
+| Community Library                | uw cl \`search text\`                   | uw cl blood infusion             |
 | System Pulse                     | uw sp                                   | uw sp                            |
 
 ## Maintenance

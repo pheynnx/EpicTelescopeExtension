@@ -16,87 +16,96 @@ export function buildUrl(text) {
   const dhInitialURL = "https://datahandbook.epic.com/Search/Index?SearchWord=";
   const novaInitialURL = "https://nova.epic.com/";
   const sherlockInitialURL = "https://sherlock.epic.com/default.aspx?";
+  const communityLibraryURL = "https://comlib.epic.com";
   const systemPulseURL = "https://systempulse.epic.com";
 
   // if user enters a keyword after the omnibox keyword, redirect search to different destination
-  var splitText = text.split(" ");
-  var firstWord = splitText[0];
-  var secondWord = splitText[1];
+  const splitText = text.split(" ");
+  const firstWord = splitText[0];
+  const secondWord = splitText[1];
+
+  // initalize newURL constructor variable
+  let newURL;
 
   switch (firstWord.toLowerCase()) {
     case "sherlock":
     case "slg":
       if (secondWord.toLowerCase() === "new") {
-        var newURL = sherlockInitialURL + "view=slg/create";
+        newURL = sherlockInitialURL + "view=slg/create";
       } else if (isNaN(secondWord)) {
-        var newURL =
+        newURL =
           sherlockInitialURL +
           "view=slg/search#txt=" +
           prepSearchString(text.substring(firstWord.length + 1));
       } else {
-        var newURL =
+        newURL =
           sherlockInitialURL + "view=slg/home#id=" + secondWord + "&view=1";
       }
       break;
     case "ra":
-      var newURL =
+      newURL =
         sherlockInitialURL +
         "view=ra/search#txt=" +
         prepSearchString(text.substring(firstWord.length + 1));
       break;
     case "nova":
       if (isNaN(secondWord)) {
-        var newURL =
+        newURL =
           novaInitialURL +
           "Search.aspx#addPt1&SearchTerm=" +
           prepSearchString(text.substring(firstWord.length + 1));
       } else {
-        var newURL = novaInitialURL + "Select.aspx?RnID=" + secondWord;
+        newURL = novaInitialURL + "Select.aspx?RnID=" + secondWord;
       }
       break;
     case "topic":
-      var newURL =
+      newURL =
         "https://userweb.epic.com/Search?Query=" +
         prepSearchString(text.substring(firstWord.length + 1));
       break;
     case "galaxy":
-      var newURL =
+      newURL =
         galaxyInitialURL +
         prepSearchString(text.substring(firstWord.length + 1));
       break;
     case "dh":
-      var newURL =
+      newURL =
         dhInitialURL +
         prepSearchString(text.substring(firstWord.length + 1)) +
         "&type=1&scf=1,2,3&auf=1";
       break;
     case "cdd":
-      var newURL =
+      newURL =
         dhInitialURL +
         prepSearchString(text.substring(firstWord.length + 1)) +
         "&type=6";
       break;
     case "webserv":
-      var newURL =
+      newURL =
         dhInitialURL +
         prepSearchString(text.substring(firstWord.length + 1)) +
         "&type=5&def=0";
       break;
     case "pg":
-      var newURL =
+      newURL =
         dhInitialURL +
         prepSearchString(text.substring(firstWord.length + 1)) +
         "&type=2";
       break;
     case "metric":
-      var newURL =
-        dhInitialURL + prepSearchString(text.substring(7)) + "&type=4";
+      newURL = dhInitialURL + prepSearchString(text.substring(7)) + "&type=4";
+      break;
+    case "cl":
+      newURL =
+        communityLibraryURL +
+        "/#?query=" +
+        prepSearchString(text.substring(firstWord.length + 1));
       break;
     case "sp":
-      var newURL = systemPulseURL;
+      newURL = systemPulseURL;
       break;
     default:
-      var newURL = galaxyInitialURL + prepSearchString(text);
+      newURL = galaxyInitialURL + prepSearchString(text);
   }
   return newURL;
 }
