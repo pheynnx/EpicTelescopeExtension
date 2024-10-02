@@ -11,7 +11,6 @@ function prepSearchString(searchText) {
 }
 
 export function buildUrl(text) {
-  // use a constant if the URL is getting reused
   const galaxyInitialURL = "https://galaxy.epic.com/?#Search/searchWord=";
   const dhInitialURL = "https://datahandbook.epic.com/Search/Index?SearchWord=";
   const novaInitialURL = "https://nova.epic.com/";
@@ -30,8 +29,10 @@ export function buildUrl(text) {
   switch (firstWord.toLowerCase()) {
     case "sherlock":
     case "slg":
-      if (secondWord.toLowerCase() === "new") {
+      if (secondWord?.toLowerCase() === "new") {
         newURL = sherlockInitialURL + "view=slg/create";
+      } else if (secondWord === undefined) {
+        newURL = sherlockInitialURL + "view=slg/home";
       } else if (isNaN(secondWord)) {
         newURL =
           sherlockInitialURL +
@@ -39,7 +40,7 @@ export function buildUrl(text) {
           prepSearchString(text.substring(firstWord.length + 1));
       } else {
         newURL =
-          sherlockInitialURL + "view=slg/home#id=" + secondWord + "&view=1";
+          sherlockInitialURL + "view=slg/search#id=" + secondWord + "&rv=0";
       }
       break;
     case "ra":

@@ -2,7 +2,7 @@
 
 <img align="center" width="60" src="./.github/telescope.png"/>
 
-#### Version 1.3
+#### Version 1.4
 
 Based on the amazing work of Marklannucci: [original source](https://github.com/MarkIannucci/ChromeUserWebSearchExtension).
 

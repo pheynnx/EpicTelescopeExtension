@@ -1,5 +1,5 @@
 import { assertEquals } from "jsr:@std/assert";
-import { buildUrl } from "../extension/functions.js";
+import { buildUrl } from "../Extension/functions.js";
 
 Deno.test("test sherlock url", () => {
   const output = buildUrl("sherlock nothing");
@@ -9,11 +9,24 @@ Deno.test("test sherlock url", () => {
   );
 });
 
-Deno.test("test slg url", () => {
+Deno.test("test slg string url", () => {
   const output = buildUrl("slg nothing");
   assertEquals(
     output,
     "https://sherlock.epic.com/default.aspx?view=slg/search#txt=nothing"
+  );
+});
+
+Deno.test("test slg empty url", () => {
+  const output = buildUrl("slg");
+  assertEquals(output, "https://sherlock.epic.com/default.aspx?view=slg/home");
+});
+
+Deno.test("test slg id url", () => {
+  const output = buildUrl("slg 9016152");
+  assertEquals(
+    output,
+    "https://sherlock.epic.com/default.aspx?view=slg/search#id=9016152&rv=0"
   );
 });
 

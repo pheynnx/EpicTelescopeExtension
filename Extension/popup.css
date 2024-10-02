@@ -1,5 +1,5 @@
 html {
-  width: 700px;
+  min-width: max-content;
   background-color: #181818;
   color: #f7f7f7;
   font-family: sans-serif;
@@ -7,6 +7,7 @@ html {
 
 .telescope-table {
   border: none;
+  width: 100%;
   border-spacing: 0;
   font-size: 15px;
 }
@@ -24,7 +25,7 @@ html {
 
 .telescope-table tbody td {
   border: solid 1px #363636;
-  padding: 5px;
+  padding: 6px;
 }
 .telescope-table-highlight-all {
   overflow: hidden;
