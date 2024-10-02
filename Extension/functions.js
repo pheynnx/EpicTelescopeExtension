@@ -29,10 +29,10 @@ export function buildUrl(text) {
   switch (firstWord.toLowerCase()) {
     case "sherlock":
     case "slg":
-      if (secondWord?.toLowerCase() === "new") {
-        newURL = sherlockInitialURL + "view=slg/create";
-      } else if (secondWord === undefined) {
+      if (secondWord === undefined) {
         newURL = sherlockInitialURL + "view=slg/home";
+      } else if (secondWord.toLowerCase() === "new") {
+        newURL = sherlockInitialURL + "view=slg/create";
       } else if (isNaN(secondWord)) {
         newURL =
           sherlockInitialURL +
